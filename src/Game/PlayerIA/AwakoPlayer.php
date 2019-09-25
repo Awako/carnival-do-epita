@@ -22,10 +22,10 @@ class AwakoPlayer extends Player
     {
       // Return default choice based on psychological stats to win for the first round, because there is no history
       if (!$this->result->getLastChoiceFor($this->mySide)) {
-        // $arr = array('a'=>parent::paperChoice(), 'b'=>parent::rockChoice(), 'c'=>parent::scissorsChoice());
-        // shuffle(arr);
-        // return $arr[0];
-        return parent::scissorsChoice();
+        $arr = array('a'=>parent::paperChoice(), 'b'=>parent::rockChoice(), 'c'=>parent::scissorsChoice());
+        shuffle($arr);
+        return $arr[0];
+        // return parent::scissorsChoice();
       }
       // add last choices to make an history in order to make statistics
       if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
