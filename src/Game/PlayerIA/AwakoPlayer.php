@@ -25,7 +25,6 @@ class AwakoPlayer extends Player
         $arr = array('a'=>parent::paperChoice(), 'b'=>parent::rockChoice(), 'c'=>parent::scissorsChoice());
         shuffle($arr);
         return $arr[0];
-        // return parent::scissorsChoice();
       }
       // add last choices to make an history in order to make statistics
       if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
