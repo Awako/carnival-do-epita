@@ -21,7 +21,7 @@ class AwakoPlayer extends Player
     public function getChoice()
     {
       if (!$this->result->getLastChoiceFor($this->mySide)) {
-        return parent::scissorsChoice();
+        return parent::paperChoice();
       }
       if ($this->result->getLastChoiceFor($this->opponentSide) == parent::rockChoice())
         $this->rock++;
